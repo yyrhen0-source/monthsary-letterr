@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You 💌</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffe6f0, #fff);
+      font-family: Arial;
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    h2 {
+      color: #d63384;
+    }
+
+    .envelope {
+      width: 220px;
+      cursor: pointer;
+      transition: transform 0.4s;
+    }
+
+    .envelope:hover {
+      transform: scale(1.05);
+    }
+
+    #letter {
+      display: none;
+      margin: 30px auto;
+      width: 85%;
+      max-width: 420px;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    #photo {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Click the envelope 💌</h2>
+
+<img 
+  id="env" 
+  class="envelope" 
+  src="https://cdn-icons-png.flaticon.com/512/561/561127.png"
+  onclick="openLetter()"
+/>
+
+<div id="letter">
+
+  <img id="photo" src="yourphoto.jpg">
+
+  <h3>Happy Monthsary 🤍</h3>
+
+  <p>
+    I know we’re not perfect, but I still choose you every day.
+  </p>
+
+  <p>
+    Thank you for staying, for trying, and for loving me.
+  </p>
+
+  <p>
+    I love you… always 💌
+  </p>
+
+</div>
+
+<audio id="music" src="yoursong.mp3"></audio>
+
+<script>
+function openLetter() {
+  document.getElementById("env").src = "https://cdn-icons-png.flaticon.com/512/561/561188.png";
+  document.getElementById("letter").style.display = "block";
+  document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
